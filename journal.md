@@ -46,3 +46,7 @@ Next steps:
     confirm scope of our project with teaching staff
     find literature to learn more about forest fire causes and influences and background
     revist biodiversity paper to get an idea for how to set up scm
+
+3/10
+
+Looked extensively for causal model link assumptions. Found the following paper:https://arxiv.org/html/2403.08414v1 which includes candidate causal graphs for he meditteranean region but nothing for the US. This paper includes causal effects of OCI factors such as el nino etc. which will be completely differnt for out case. We can maybe assume that such factors are unobserved for the US use case and use the candidate graphs for the remaining factors in the paper.
