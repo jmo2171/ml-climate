@@ -48,5 +48,12 @@ Next steps:
     revist biodiversity paper to get an idea for how to set up scm
 
 3/10
-
 Looked extensively for causal model link assumptions. Found the following paper:https://arxiv.org/html/2403.08414v1 which includes candidate causal graphs for he meditteranean region but nothing for the US. This paper includes causal effects of OCI factors such as el nino etc. which will be completely differnt for out case. We can maybe assume that such factors are unobserved for the US use case and use the candidate graphs for the remaining factors in the paper.
+
+
+3/14
+We've started working on accessing our data. The dataset is in the form of .trecords which makes it convenient to load with tensorflow. The variables we have available are elevation, wind direction, windspeed, max temp, min temp, humidity, precipitation, drought index, vegetation, population density, energy release component and previous fire mask for different points in space at different times. our hope is to use this data set to create a causal model of where the fire will spread on the next day. By iteratively repeating this process the hope is to create a prediction for how the fire spreads over the course of several days and determine patterns that lead to the fire dying. Since we will probably need a linearity assumption in determining the causal relationship strength between variables, we will have a first order prediction which is likely to get significantly more and more inaccurate as one uses it repeatedly to look farther in the future.
+
+We are considering using TensorFlow Causal Impact to conduct our analysis and test interventions in the form of different average (we will change min and max temperature by the assumed change in average) temperatures, precipitation, humidity, vegetation cover (we can estimate the effects of fire lines, etc.), and population density.
+
+We are currently evaluating a priority order for the different sources of input from the data to determine which ones we will use for our final model and which ones we may exclude. The next step is to implement and train a basic SCM and test its performance.
