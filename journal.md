@@ -57,3 +57,14 @@ We've started working on accessing our data. The dataset is in the form of .trec
 We are considering using TensorFlow Causal Impact to conduct our analysis and test interventions in the form of different average (we will change min and max temperature by the assumed change in average) temperatures, precipitation, humidity, vegetation cover (we can estimate the effects of fire lines, etc.), and population density.
 
 We are currently evaluating a priority order for the different sources of input from the data to determine which ones we will use for our final model and which ones we may exclude. The next step is to implement and train a basic SCM and test its performance.
+
+
+3/25
+
+We had a long conversation about how we would tackle the next steps of our project. We determined that the bottleneck we were facing was coming up with a meaningful DAG that was backed by literature. We came up with the following plan:
+
+Aryaman will comb through the dataset and format the data using pandas in an accessible manner. Additionally, he will build a regression based predictor for wildfire spread. Jenny will conduct research on the best Python libraries/techniques to create DAGs and SCMs. We have identified that tensorflow is a good baseline to use, especially since our data is already in .tfrecord but we want to keep an eye out for better libraries. Jenny will also look into whether there is anymore literature to find more causal assumptions backed by literature.
+
+Finally we discussed using conditional independencies in the data columns to create one or more skeleton(s) of DAG model(s). We could use all the assumptions we've found from the literature (we have already found a small set from one paper, we will look for more) to orient these skeletons. The result will be a few DAG models (we are aiming for 3-5). We will use the validation set to construct a benchmark. We will also compare these DAG models with the regression model as another benchmark. 
+
+We beleieve we have a suitable path to complete this project, the big missing piece is the construction of the DAGs which we have a plan to acheive.
