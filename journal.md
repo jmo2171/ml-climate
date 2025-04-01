@@ -74,3 +74,5 @@ We beleieve we have a suitable path to complete this project, the big missing pi
 
 Created a google colab notebook with the necessary code to load the dataset (derived from the database creator's code). the creator of the dataset included some handy code to select random samples of the data as well as to crop out random samples of the given dataset. There are still some issues such as the fact that it doesn't seem like the previous fire mask variable is loading correctly but this may only appear to be the case due to the random croppings taken.
 
+Adendum: After some further testing it seems the issue with loading the previos firemask was caused by randomly selecting and cropping out a subset of the whole sample area. This may be rectified by discarding samples that do not have any fires in the previous fire mask or by not cropping any of the samples before using them.
+
