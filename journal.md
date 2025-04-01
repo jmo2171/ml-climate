@@ -68,3 +68,9 @@ Aryaman will comb through the dataset and format the data using pandas in an acc
 Finally we discussed using conditional independencies in the data columns to create one or more skeleton(s) of DAG model(s). We could use all the assumptions we've found from the literature (we have already found a small set from one paper, we will look for more) to orient these skeletons. The result will be a few DAG models (we are aiming for 3-5). We will use the validation set to construct a benchmark. We will also compare these DAG models with the regression model as another benchmark. 
 
 We beleieve we have a suitable path to complete this project, the big missing piece is the construction of the DAGs which we have a plan to acheive.
+
+
+4/1
+
+Created a google colab notebook with the necessary code to load the dataset (derived from the database creator's code). the creator of the dataset included some handy code to select random samples of the data as well as to crop out random samples of the given dataset. There are still some issues such as the fact that it doesn't seem like the previous fire mask variable is loading correctly but this may only appear to be the case due to the random croppings taken.
+
