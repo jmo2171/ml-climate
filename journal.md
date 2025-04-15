@@ -76,3 +76,10 @@ Created a google colab notebook with the necessary code to load the dataset (der
 
 Adendum: After some further testing it seems the issue with loading the previos firemask was caused by randomly selecting and cropping out a subset of the whole sample area. This may be rectified by discarding samples that do not have any fires in the previous fire mask or by not cropping any of the samples before using them.
 
+4/14
+
+Very busy with other classes this week.
+Current status:
+We have the dataset properly loaded.
+We have code for our alternative models mainly outlined following the original release of the dataset paper.
+We are working with python library PyWhy to implement our causal models. 
