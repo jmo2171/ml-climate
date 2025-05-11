@@ -91,17 +91,17 @@ We currently are running scripts to augment our dataset with potential variables
 We will ultimately compare our causal model to existing ai models like the ones describe here https://www.sciencedirect.com/science/article/pii/S2666592122000373 
 
 
-[Backfilling since we forgot to update our journal previously]
-
+[filling since we forget committ our journal previously]
 
 4/27
-Conducted causal analysis on both the continuous wild fire size variable as well as the discrete wildfire size class variable which categorises wildfires into ordinal groupings based on their size. As of now we have done a lot of causal graph discovery but haven't found a suitable graph to describe our problem as yet. We have some graphs that are extremely complicated and make no sense. We also have simpler ones that we posit, however these seem to perform extremely badly with R^2 close to 0. We have only tested these models with linear SCMs at the moment and so it might be necessary to use a more expressive funcitonal model.
+Conducted causal analysis on both the continuous wild fire size variable as well as the discrete wildfire size class variable which categorises wildfires into ordinal groupings based on their size. As of now we have done a lot of causal graph discovery but haven't found a great graph to describe our problem as yet. We have some graphs that are extremely complicated and make no sense. We also have simpler ones that we posit, however these seem to perform extremely badly with R^2 close to 0. We have only tested these models with linear SCMs at the moment and so it might be necessary to use a more expressive funcitonal model.
 
 We also recorded our video for the presentation in class
+We started writing the framework of our paper. 
 
 
 5/4
-We conducted extensive feature analysis and analysed class imbalances in our data to see if these statistics would help us with finding a better graphical model which we could finalise. We also evaluated these new graphs using Linear models, random forest models, XGBoost models and Histrogram Gradient Descent models. DoWhy doesn't seem to be working well with these models. Another limitation of doWhy that we discovered is that it keeps the model parameters private and there is no good way to access them.
+We conducted extensive feature analysis and analysed class imbalances in our data to see if these statistics would help us with finding a better graphical model which we could finalise. We also evaluated these new graphs using Linear models, random forest models, XGBoost models and Histrogram Gradient Descent models. DoWhy doesn't seem to be working well with these models. Another limitation of doWhy that we discovered is that it keeps the model parameters private and there is no good way to access them that we have been able to find. 
 
 We recorded our second video
 
@@ -112,4 +112,4 @@ We found an even better causal graph which we decided to use as our final graph.
 
 We conducted validation using a random test-train split. We also split the data based on the year. We found that splitting before vs after 2014 created an almost perfect 80-20 split in the data and so conducted future generalization validation based on this split. Interestingly we found that the model performed better on the generalization split than on the random split. Upon further evaluation, we note that while all fire categories per year increased post 2014, the class A fires saw the biggest increase which worsened our class imbalance in the data. This may explain the improved performance of our model.
 
-After collating our findings we wrote out our paper.
+After collating our findings we finished writing out our paper.
